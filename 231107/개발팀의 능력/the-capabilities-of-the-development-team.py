@@ -36,6 +36,7 @@ for i in range(N):
                     continue
                 if duplicates(i, j, k, l):
                     continue
+                    
                 diff_ = get_diff(i, j, k, l)
                 min_ = min(min_, diff_)
 
