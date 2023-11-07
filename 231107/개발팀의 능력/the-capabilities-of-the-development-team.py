@@ -27,23 +27,21 @@ def get_diff(i, j, k, l):
 
 
 for i in range(N):
-    dup = 0
     for j in range(i+1, N):
         for k in range(N):
             for l in range(k+1, N):
-                
                 if i == k or i == l or j == k or j == l:
                     continue
+
                 if duplicates(i, j, k, l):
                     dup = 1
-                    break
+                    continue
                 
-                else:
-                    dup = 0
-                    diff_ = get_diff(i, j, k, l)
-                    min_ = min(min_, diff_)
+                dup = 0
+                diff_ = get_diff(i, j, k, l)
+                min_ = min(min_, diff_)
 
-if dup:
+if dup == 1:
     print(-1)
 else:
     print(min_)
