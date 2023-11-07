@@ -1,6 +1,4 @@
 import sys
-
-max_ = -sys.maxsize
 min_ = sys.maxsize
 
 developers = list(map(int, input().split()))
@@ -31,13 +29,20 @@ def get_diff(i, j, k, l):
 for i in range(N):
     for j in range(i+1, N):
         for k in range(N):
+            dup = 0
             for l in range(k+1, N):
                 if i == k or i == l or j == k or j == l:
                     continue
                 if duplicates(i, j, k, l):
+                    dup = 1
                     continue
-                    
-                diff_ = get_diff(i, j, k, l)
-                min_ = min(min_, diff_)
+                
+                else:
+                    dup = 0
+                    diff_ = get_diff(i, j, k, l)
+                    min_ = min(min_, diff_)
 
-print(min_)
+if dup:
+    print(-1)
+else:
+    print(min_)
