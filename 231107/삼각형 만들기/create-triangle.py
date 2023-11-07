@@ -19,6 +19,6 @@ for i in range(N):
             (y1 == y2 or y1 == y3 or y2 == y3):
                 area = get_area(x1, y1, x2, y2, x3, y3)
         
-        max_ = max(max_, area)
+            max_ = max(max_, area)
 
 print(max_)
