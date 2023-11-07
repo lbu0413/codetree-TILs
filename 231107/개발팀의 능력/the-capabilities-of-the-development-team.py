@@ -25,7 +25,7 @@ def get_diff(i, j, k, l):
 
     return max_team - min_team
 
-
+dup = 1
 for i in range(N):
     for j in range(i+1, N):
         for k in range(N):
@@ -34,12 +34,11 @@ for i in range(N):
                     continue
 
                 if duplicates(i, j, k, l):
-                    dup = 1
                     continue
-                
-                dup = 0
-                diff_ = get_diff(i, j, k, l)
-                min_ = min(min_, diff_)
+                else:
+                    dup = 0
+                    diff_ = get_diff(i, j, k, l)
+                    min_ = min(min_, diff_)
 
 if dup:
     print(-1)
