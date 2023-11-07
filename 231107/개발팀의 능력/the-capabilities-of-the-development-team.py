@@ -36,7 +36,7 @@ for i in range(N):
                     continue
                 if duplicates(i, j, k, l):
                     dup = 1
-                    continue
+                    break
                 
                 else:
                     dup = 0
