@@ -18,17 +18,17 @@ for i in range(1, 10):
                 y = asked_num // 10 % 10
                 z = asked_num % 10
 
-                if i == x:
+                if x == i:
                     c1 += 1
-                if j == y:
+                if y == j:
                     c1 += 1
-                if k == z:
+                if z == k:
                     c1 += 1
-                if j == x or y == x:
+                if x == j or x == k:
                     c2 += 1
-                if i == y or i == z:
+                if y == i or y == k:
                     c2 += 1
-                if k == x or k == y:
+                if z == i or z == j:
                     c2 += 1
             
                 if c1 != cnt1 or c2 != cnt2:
