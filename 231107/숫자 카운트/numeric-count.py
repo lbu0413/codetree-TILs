@@ -8,7 +8,7 @@ for i in range(1, 10):
     for j in range(1, 10):
         for k in range(1, 10):
             
-            if i == j == k:
+            if i == j or j == k or k == i:
                 continue
 
             passed = True
