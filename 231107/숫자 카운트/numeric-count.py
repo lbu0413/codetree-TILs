@@ -7,6 +7,8 @@ ans = 0
 for i in range(1, 10):
     for j in range(1, 10):
         for k in range(1, 10):
+            if i == j or j == k or i == k:
+                continue
             
             for asked_num, cnt1, cnt2 in arr:
                 c1, c2 = 0, 0
