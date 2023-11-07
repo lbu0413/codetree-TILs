@@ -41,7 +41,7 @@ for i in range(N):
                 diff_ = get_diff(i, j, k, l)
                 min_ = min(min_, diff_)
 
-if dup == 1:
+if dup:
     print(-1)
 else:
     print(min_)
