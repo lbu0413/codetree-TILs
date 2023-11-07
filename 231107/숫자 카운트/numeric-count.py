@@ -11,7 +11,6 @@ for i in range(1, 10):
             if i == j or j == k or k == i:
                 continue
 
-            passed = True
             for asked_num, cnt1, cnt2 in arr:
                 c1, c2 = 0, 0
                 x = asked_num // 100
@@ -32,10 +31,9 @@ for i in range(1, 10):
                     c2 += 1
             
                 if c1 != cnt1 or c2 != cnt2:
-                    passed = False
                     break
             
-            if passed:
+            else:
                 ans += 1
 
 print(ans)
