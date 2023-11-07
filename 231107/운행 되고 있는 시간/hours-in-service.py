@@ -11,7 +11,7 @@ for i in range(N):
         if i == j:
             continue
         start, end = working_time[j]
-        total_ += (end - start + 1)
+        total_ += (end - start)
 
         max_ = max(max_, total_)
 
