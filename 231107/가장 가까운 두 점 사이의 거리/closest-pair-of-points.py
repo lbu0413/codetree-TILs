@@ -11,7 +11,7 @@ def diff_(i, j):
     return (x1-x2) * (x1-x2) + (y1-y2) * (y1-y2)
 
 for i in range(N):
-    for j in range(N):
+    for j in range(i+1, N):
         if i == j:
             continue
         
