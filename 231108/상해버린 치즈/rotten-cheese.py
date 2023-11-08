@@ -1,72 +1,57 @@
-# class
 class Info1:
-    def __init__(self, p, m, t):
-        self.p, self.m, self.t = p, m, t 
-        # p = person, m = cheese num, t = time
+    def __init__(self, p, m, t): # p 사람 , m 치즈, t, 먹은 시간
+        self.p, self.m, self.t = p, m , t
     
-class Info2:
-    def __init__ (self, p, t):
-        self.p, self.t = p, t
-        # p = person, t = time
 
-n, m, d, s = tuple(map(int, input().split()))
+class Info2 :
+    def __init__(self, p, t): # p 사람, t 아픈 시간
+        self.p, self.t = p, t
+
+
+n, m, d, s = map(int, input().split()) # n 사람의 수, m 치즈의 수, d 치즈를 먹은 기록의 수, s 아픈 기록의 수
 
 info1 = []
-for _ in range(d):
-    p, x, t = tuple(map(int, input().split()))
-    info1.append(Info1(p, x, t))
-
-
+for i in range(d):
+    p, m, t = map(int, input().split())
+    info1.append(Info1(p, m, t))
 
 info2 = []
-for _ in range(s):
-    p, t = tuple(map(int, input().split()))
+for i in range(s):
+    p, t = map(int, input().split())
     info2.append(Info2(p, t))
 
+
 ans = 0
-
-# 하나의 치즈가 상했을 때 필요한 약의 수의 최대값을 구한다
-for i in range(1, m + 1):
-    # i번째 치즈가 상했을 때 필요한 약의 수를 구한다.
-
-    # 우선 i번째 치즈가 상했다고 가정할 때 모순이 발생하는지 확인한다.
-    # time 배열을 만들어 각 사람이 언제 치즈를 먹었는지 저장한다.
+for i in range(1, m+1): 
+    
     time = [0] * (n + 1)
+
     for info in info1:
-        # i번째 치즈에 대한 정보가 아닌 경우 넘어간다.
         if info.m != i:
             continue
-        
-        # person이 i번째 치즈를 처음 먹었거나
-        # 이전보다 더 빨리 먹게 된 경우 time배열을 갱신한다.
         person = info.p
         if time[person] == 0:
             time[person] = info.t
-        elif time[person] > info.t:
+        
+        if time[person] > info.t:
             time[person] = info.t
-        
 
-        # possible: i번째 치즈가 상했을 수 있으면 true 아니면 false
-        possible = True
-        
-        for info in info2:
-            # person이 i번째 치즈를 먹지 않았거나
-            # i번째 치즈를 먹은 시간보다 먼저 아픈 경우 모순이 생김
-            person = info.p
-            if time[person] == 0:
-                possible = False
-            if time[person] >= info.t:
-                possible = False
-        
-        # 만약 i번째 치즈가 상했을 가능성이 있다면, 몇 개의 약이 필요한지 확인합니다.
-        pill = 0
-        if possible:
-        # 한번이라도 i번째 치즈를 먹은 적이 있다면, 약이 필요하다
-            for j in range(1, n+1):
-                if time[j] != 0:
-                    pill += 1
-        
+    possible = True # i번째 치즈가 상했을 수 있으면 true 아니면 false
 
-        ans = max(ans, pill)
+    for info in info2:
+        person = info.p
+        if time[person] == 0: # 만약 아픈 기록이 없다면 모순.
+            possible = False
+        
+        if time[person] >= info.t: # 만약 아픈 기록이 치즈 먹은 기록 보다 빠르다면 모순
+            possible = False
+    
+    pill = 0
+    if possible:
+        for j in range(1, n+1):
+            if time[j] > 0:
+                pill += 1
+
+    ans = max(ans, pill)
 
 print(ans)
