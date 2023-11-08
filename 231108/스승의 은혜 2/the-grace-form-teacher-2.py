@@ -13,12 +13,12 @@ for i in range(N):
         if j == i:
             budget += presents[j] // 2
             if budget >= B:
-                break
+                continue
             cnt += 1
         else:
             budget += presents[j]
             if budget >= B:
-                break
+                continue
             cnt += 1
 
     max_ = max(max_, cnt)
