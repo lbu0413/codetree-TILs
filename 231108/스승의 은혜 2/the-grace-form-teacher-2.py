@@ -3,7 +3,7 @@ import sys
 max_ = -sys.maxsize
 
 N, B = map(int, input().split())
-presents = [int(input()) for _ in range(N)]
+presents = sorted([int(input()) for _ in range(N)])
 
 # 반 값으로 할인 받는 선물
 for i in range(N):
