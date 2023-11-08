@@ -11,7 +11,7 @@ for i in range(N):
     budget = 0
     for j in range(N): # 나머지 선물
         if j == i:
-            budget += presents[j]
+            budget += presents[j] // 2
             if budget >= B:
                 continue
             cnt += 1
