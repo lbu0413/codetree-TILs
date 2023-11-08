@@ -3,23 +3,25 @@ import sys
 max_ = -sys.maxsize
 
 N, B = map(int, input().split())
-presents = sorted([int(input()) for _ in range(N)])
+presents = [int(input()) for _ in range(N)]
 
-# 반 값으로 할인 받는 선물
+
 for i in range(N):
+    tmp = [presents[j] for j in range(N)]
+    tmp[i] //= 2
+    
+    tmp.sort()
     cnt = 0
     budget = 0
-    for j in range(N): # 나머지 선물
-        if j == i:
-            budget += presents[j] // 2
-            if budget >= B:
-                continue
-            cnt += 1
-        else:
-            budget += presents[j]
-            if budget >= B:
-                continue
-            cnt += 1
 
+
+    for j in range(N):
+        if budget + tmp[j] > B:
+            break
+        budget += tmp[j]
+        cnt += 1
+    
     max_ = max(max_, cnt)
+
+
 print(max_)
