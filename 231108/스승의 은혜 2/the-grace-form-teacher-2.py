@@ -8,14 +8,21 @@ presents = [int(input()) for _ in range(N)]
 # 반 값으로 할인 받는 선물
 for i in range(N):
     cnt = 0
-    budget = (presents[i] // 2)
+    budget = 0
     for j in range(N): # 나머지 선물
         if j == i:
+            budget += presents[j] // 2
+            cnt += 1
             continue
+
+        budget += presents[j]
+
         if budget >= B:
             break
-        budget += presents[j]
+
         cnt += 1
+
+        
     
     max_ = max(max_, cnt)
 
