@@ -18,11 +18,9 @@ for i in range(N):
                 cnt += 1
         else:
             budget += presents[j]
-        
-        if budget >= B:
-            break
-
-        cnt += 1
+            if budget >= B:
+                break
+            cnt += 1
 
     max_ = max(max_, cnt)
 print(max_)
