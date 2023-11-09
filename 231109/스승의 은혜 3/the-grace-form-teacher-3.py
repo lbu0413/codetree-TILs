@@ -8,7 +8,10 @@ for i in range(N): # 쿠폰을 쓸 선물을 고른다
     gift, shipping = presents[i]
     gift = gift // 2
     total = gift + shipping
-    cnt = 1
+    if total <= B:
+        cnt = 1
+    else:
+        cnt = 0
     for j in range(N):
         if i == j:
             continue
