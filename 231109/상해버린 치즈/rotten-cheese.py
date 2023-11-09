@@ -12,8 +12,8 @@ n, m, d, s = map(int, input().split()) # n 사람의 수, m 치즈의 수, d 치
 
 info1 = []
 for i in range(d):
-    p, m, t = map(int, input().split())
-    info1.append(Info1(p, m, t))
+    p, x, t = map(int, input().split())
+    info1.append(Info1(p, x, t))
 
 info2 = []
 for i in range(s):
@@ -49,7 +49,7 @@ for i in range(1, m+1):
     pill = 0
     if possible:
         for j in range(1, n+1):
-            if time[j] != 0:
+            if time[j] > 0:
                 pill += 1
 
     ans = max(ans, pill)
