@@ -10,7 +10,6 @@ for i in range(K):
             greater_num = ranks[i][j]
             smaller_num = ranks[i][k]
             if i == 0:
-
                 checker.append((greater_num, smaller_num))
                 counter[greater_num] += 1
             else:
