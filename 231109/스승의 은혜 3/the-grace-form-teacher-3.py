@@ -14,8 +14,6 @@ for i in range(N):
         if budget + presents[j][0] + presents[j][1] <= B:
             budget += presents[j][0] + presents[j][1]
             cnt += 1
-        else:
-            break
 
     max_ = max(max_, cnt) 
     
