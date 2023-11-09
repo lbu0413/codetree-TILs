@@ -8,7 +8,7 @@ presents = [list(map(int, input().split())) for _ in range(N)]
 for i in range(N):
     tmp = [presents[k][:] for k in range(N)]
     tmp.sort()
-    tmp[i][0] //= 2
+    tmp[i][0] = (tmp[i][0] + 1) // 2
     cnt = 0
     budget = 0
 
