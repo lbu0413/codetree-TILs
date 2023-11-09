@@ -6,7 +6,6 @@ max_ = -1
 for i in range(N):
     bombs_in_distance = bombs[i+1:i+K+1]
     if bombs[i] in bombs_in_distance:
-        max_bid = max(bombs_in_distance)
-        max_ = max(max_bid, bombs[i])
+        max_ = max(bombs_in_distance)
 
 print(max_)
