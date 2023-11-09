@@ -1,5 +1,4 @@
 import sys
-import copy
 
 max_ = 0
 N, B = map(int, input().split())
@@ -7,7 +6,8 @@ presents = [list(map(int, input().split())) for _ in range(N)]
 
 
 for i in range(N):
-    tmp = copy.deepcopy(presents)
+    tmp = [presents[k][:] for k in range(N)]
+    print(tmp)
     tmp.sort()
     tmp[i][0] //= 2
     cnt = 0
