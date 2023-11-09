@@ -1,6 +1,6 @@
 import sys
 
-max_ = -sys.maxsize
+max_ = 0
 N, B = map(int, input().split())
 presents = [list(map(int, input().split())) for _ in range(N)]
 
@@ -10,7 +10,7 @@ for i in range(N):
     tmp[i][0] //= 2
     cnt = 0
     budget = 0
-    
+
     for j in range(N):
         if budget + tmp[j][0] + tmp[j][1] > B:
             break
