@@ -14,4 +14,4 @@ for k in range(1, max_):
     ans = max(ans, cnt)
 
 
-print(cnt)
+print(ans)
