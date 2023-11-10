@@ -11,7 +11,7 @@ def single_efficiency(low, high, t):
     if t < low:
         return c
     
-    elif t < high:
+    elif t <= high:
         return g
     
     else:
