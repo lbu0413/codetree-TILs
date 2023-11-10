@@ -11,7 +11,7 @@ for i in range(a, b+1):
         num = num // 10
     
     interesting_num = False
-    for j in range(8):
+    for j in range(10):
         if checker[j] == digit_cnt - 1:
             interesting_num = True
     
