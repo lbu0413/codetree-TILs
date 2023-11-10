@@ -8,7 +8,7 @@ for k in range(1, max_):
     cnt = 0
     for i in range(N):
         for j in range(i+1, N):
-            if nums[i] + nums[j] == k * 2:
+            if abs(nums[i] - k) == abs(nums[j] - k):
                 cnt += 1
 
     ans = max(ans, cnt)
