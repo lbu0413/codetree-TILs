@@ -7,7 +7,7 @@ cnt = 0
 for i in range(N):
     for j in range(i+1, max_):
         for k in range(i+1, N):
-            if abs(nums[i] - j) == abs(nums[k] - j):
+            if abs(nums[i] - j) == abs(nums[k] - j) and j > i:
                 cnt += 1
 
 print(cnt)
