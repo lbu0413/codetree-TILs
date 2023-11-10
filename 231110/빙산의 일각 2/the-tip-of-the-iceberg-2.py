@@ -7,11 +7,12 @@ limit = 1000 + 1
 
 for i in range(1, limit):
     cnt = 0
-    prev = False 
+    prev = True 
     for j in icebergs:
         if i < j:
             if prev:
                 cnt += 1
+                prev = False
             else:
                 cnt = 1
         else:
