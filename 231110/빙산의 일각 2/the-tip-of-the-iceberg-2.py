@@ -7,17 +7,15 @@ limit = 1000 + 1
 
 for i in range(1, limit):
     cnt = 0
-    previous = False
+    prev = False 
     for j in icebergs:
-        if j > i:
-            if previous:
+        if i < j:
+            if prev:
                 cnt += 1
             else:
-                previous = False
                 cnt = 1
-        
-        elif j <= i:
-            previous = True
+        else:
+            prev = True
 
     max_ = max(max_, cnt)
 
