@@ -13,8 +13,8 @@ for i in range(1, limit):
             if prev:
                 cnt += 1
             else:
-                cnt = 1
-                
+                continue
+
             prev = False
         else:
             prev = True
