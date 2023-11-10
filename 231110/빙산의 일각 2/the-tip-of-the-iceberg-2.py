@@ -12,9 +12,10 @@ for i in range(1, limit):
         if i < j:
             if prev:
                 cnt += 1
-                prev = False
             else:
                 cnt = 1
+                
+            prev = False
         else:
             prev = True
 
