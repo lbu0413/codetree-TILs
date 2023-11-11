@@ -33,7 +33,7 @@ for i in range(MAX):
 
             success = True
             for x, y in points: # 가로1 세로2
-                if x == i or y == j or y == k:
+                if y == i or x == j or y == k:
                     continue
                 
                 else:
