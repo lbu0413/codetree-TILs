@@ -47,9 +47,9 @@ for i in range(1, MAX_X + 1):
         # 대각선 왼쪽 위에서 오른쪽 아래로
         num_i, num_j = 0, 0
         for k in range(MAX_A):
-            if ttt[MAX_A - k - 1][MAX_A - k - 1] == i:
+            if ttt[k][MAX_A - k - 1] == i:
                 num_i += 1
-            if ttt[MAX_A - k - 1][MAX_A - k - 1] == j:
+            if ttt[k][MAX_A - k - 1] == j:
                 num_j += 1
         if num_i + num_j == 3 and num_i >= 1 and num_j >= 1:
             win = True
