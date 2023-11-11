@@ -7,7 +7,7 @@ ans = 0
 for i in range(1, MAX_X + 1):
     for j in range(1, MAX_X + 1):
         if i == j:
-            continue
+            break
         num_i, num_j = 0, 0
         win = False
     
