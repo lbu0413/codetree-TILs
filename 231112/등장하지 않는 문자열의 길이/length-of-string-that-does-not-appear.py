@@ -1,17 +1,26 @@
-import sys
-
-min_ = sys.maxsize
-MAX = 100 + 1
-
 N = int(input())
-str_input = input()
+string = input()
 
-cnt = 0
+ans = 1
 
-for i in range(N):
-    part = str_input[:i+1]
-    for j in range(i+1, N-i):
-        if str_input[j:j+i+1] == part:
-            cnt += 1
+for i in range(1, N):
 
-print(cnt+1)
+    twice = False
+
+    for j in range(N - i + 1):
+        for k in range(j + 1, N - i + 1):
+            isSame = True
+
+            for l in range(i):
+                if string[j + l] != string[k + l]:
+                    isSame = False
+            
+            if isSame:
+                twice = True
+    if twice:
+        ans = i + 1
+    
+    else:
+        break
+
+print(ans)
