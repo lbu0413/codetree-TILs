@@ -13,7 +13,7 @@ for i in range(N):
     for j in range(N):
         if i == j:
             continue
-        if abs(nums[j] - num) <= 3:
+        if abs(nums[j] - num) <= K:
             cnt += 1
     max_ = max(max_, cnt)
 
