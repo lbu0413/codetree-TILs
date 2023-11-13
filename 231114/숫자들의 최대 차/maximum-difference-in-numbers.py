@@ -4,17 +4,16 @@ max_ = -sys.maxsize
 
 N, K = map(int, input().split())
 nums = [int(input()) for _ in range(N)]
-cnt = 0
-
 
 for i in range(N):
     num = nums[i]
-    cnt = 1
+    cnt = [num]
     for j in range(N):
         if i == j:
             continue
-        if abs(nums[j] - num) <= K:
-            cnt += 1
+        if abs(nums[j] - num) > K:
+            continue
+        cnt.append(nums[j])
     # max_ = max(max_, cnt)
 
-print(cnt)
+print(len(cnt))
