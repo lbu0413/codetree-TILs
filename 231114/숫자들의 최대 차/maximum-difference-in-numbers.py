@@ -11,9 +11,9 @@ for i in range(N):
     for j in range(N):
         if i == j:
             continue
-        if abs(nums[j] - num) > K:
+        if abs(nums[j] - max(cnt)) > K:
             continue
-        cnt.append(nums[j])
-    # max_ = max(max_, cnt)
+        else:
+            cnt.append(nums[j])
 
 print(len(cnt))
