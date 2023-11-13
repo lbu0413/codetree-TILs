@@ -9,12 +9,12 @@ cnt = 0
 
 for i in range(N):
     num = nums[i]
-    cnt = 0
+    cnt = 1
     for j in range(N):
         if i == j:
             continue
         if abs(nums[j] - num) <= K:
             cnt += 1
-    max_ = max(max_, cnt)
+    # max_ = max(max_, cnt)
 
-print(max_)
+print(cnt)
