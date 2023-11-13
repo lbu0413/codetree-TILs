@@ -8,10 +8,12 @@
 
 |총 문제수|획득 경험치|연속 학습|
 |---:|---:|---|
-1|60xp|12일째🔥|
+3|60xp|12일째🔥|
 
 |교재|이름|난이도|상태|최근 제출 코드|
 |---|---|:---:|:---:|---|
+|[Novice Mid / 완전탐색 III / 기준을 새로 설정하여 완전탐색](https://www.codetree.ai/missions?missionId=5)|[[개념]가장 작은 x 찾기](https://www.codetree.ai/missions/5/problems/find-smallest-x)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/lbu0413/codetree-TILs/blob/main/231113/%EA%B0%80%EC%9E%A5%20%EC%9E%91%EC%9D%80%20x%20%EC%B0%BE%EA%B8%B0/find-smallest-x.py)|
+|[Novice Mid / 함수 / 값을 반환하는 함수](https://www.codetree.ai/missions?missionId=5)|[[개념]함수를 이용한 369 게임](https://www.codetree.ai/missions/5/problems/369-games-using-functions)|![보통][medium]|![Passed][passed]|[링크](https://github.com/lbu0413/codetree-TILs/blob/main/231113/%ED%95%A8%EC%88%98%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%9C%20369%20%EA%B2%8C%EC%9E%84/369-games-using-functions.py)|
 |[Novice Mid / 완전탐색 III / 기준을 새로 설정하여 완전탐색](https://www.codetree.ai/missions?missionId=5)|[[개념]가장 많이 나온 쌍](https://www.codetree.ai/missions/5/problems/the-most-frequent-pair)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/lbu0413/codetree-TILs/blob/main/231113/%EA%B0%80%EC%9E%A5%20%EB%A7%8E%EC%9D%B4%20%EB%82%98%EC%98%A8%20%EC%8C%8D/the-most-frequent-pair.py)|
 
 
