@@ -13,17 +13,17 @@ for i in range(1, N + 1):
     
     # 배열에는 1이상 N이하의 숫자들이 단 한번씩만 등장해야함.
     satisfied = True
-    exists = [False] * (N + 1)
+    exists = [False] * (MAX)
 
     for j in range(N):
         if arr[j] < 1 or arr[j] > N:
             satisfied = False
-        
-        if exists[arr[j]]:
-            satisfied = False
-        exists[arr[j]] = True
+        else:
+            if exists[arr[j]]:
+                satisfied = False
+            exists[arr[j]] = True
     
     if satisfied:
         for x in arr:
             print(x, end=" ")
-        sys.exit(0)
+        sys.exit()
