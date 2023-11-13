@@ -13,7 +13,7 @@ for i in range(1, N + 1):
     
     # 배열에는 1이상 N이하의 숫자들이 단 한번씩만 등장해야함.
     satisfied = True
-    exists = [False] * MAX
+    exists = [False] * (N + 1)
 
     for j in range(N):
         if arr[j] < 1 or arr[j] > N:
