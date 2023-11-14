@@ -11,12 +11,13 @@ for i in range(N):
             continue
         if the_bomb == bombs[j]:
             arr[bombs[j]] += 1
-print(bombs)
 
-max_bomb = max(bombs)
+
+
+max_bomb = max(arr)
 
 if max_bomb == 0:
     print(0)
 
 else:
-    print(bombs.index(max_bomb))
+    print(arr.index(max_bomb))
