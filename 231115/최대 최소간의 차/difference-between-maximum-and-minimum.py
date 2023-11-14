@@ -1,22 +1,25 @@
+import sys
 N, K = map(int, input().split())
 
 nums = list(map(int, input().split()))
 
+MAX = 10000 + 1
+
+min_ = sys.maxsize
 
 
-cost = 0
-
-for i in range(N):
-    for j in range(N):
-        if i == j:
+for i in range(1, MAX):
+    cost = 0
+    for num in nums:
+        if i <= num and num <= i + K:
             continue
-
-        if abs(nums[j] - nums[i]) > K and nums[j] - nums[i] < 0:
-            nums[j] += 1
-            cost += 1
         
-        elif abs(nums[j] - nums[i]) > K:
-            nums[j] -= 1
-            cost += 1
+        elif i > num:
+            cost += (i - num)
+        
+        elif i + K < num:
+            cost += (num - i - K)
 
-print(cost)
+    min_ = min(min_, cost)
+
+print(min_)
