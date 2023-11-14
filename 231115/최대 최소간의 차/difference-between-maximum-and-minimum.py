@@ -18,5 +18,6 @@ for i in range(N):
         elif abs(nums[j] - nums[i] > K):
             nums[j] -= 1
             cost += 1
-
+    else:
+        continue
 print(cost)
