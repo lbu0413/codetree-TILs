@@ -15,7 +15,7 @@ for i in range(N):
             nums[j] += 1
             cost += 1
         
-        elif abs(nums[j] - nums[i] > K):
+        elif abs(nums[j] - nums[i]) > K:
             nums[j] -= 1
             cost += 1
     else:
