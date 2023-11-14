@@ -7,7 +7,7 @@ nums = list(map(int, input().split()))
 cost = 0
 
 for i in range(N):
-    for j in range(N):
+    for j in range(i + 1, N):
         if i == j:
             continue
 
@@ -18,6 +18,5 @@ for i in range(N):
         elif abs(nums[j] - nums[i]) > K:
             nums[j] -= 1
             cost += 1
-    else:
-        continue
+
 print(cost)
