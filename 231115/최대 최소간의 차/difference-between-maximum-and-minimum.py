@@ -7,7 +7,7 @@ nums = list(map(int, input().split()))
 cost = 0
 
 for i in range(N):
-    for j in range(i + 1, N):
+    for j in range(N):
         if i == j:
             continue
 
