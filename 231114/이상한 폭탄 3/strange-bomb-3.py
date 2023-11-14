@@ -6,12 +6,11 @@ bombs = [int(input()) for _ in range(N)]
 
 for i in range(N):
     the_bomb = bombs[i]
-    for j in range(i, K + 1):
+    for j in range(i + 1, K + 1):
         if j < 0 or j >= N:
             continue
         if the_bomb == bombs[j]:
             arr[bombs[j]] += 1
-
 
 
 max_bomb = max(arr)
