@@ -3,12 +3,20 @@ import sys
 N = int(input())
 lines = sorted([tuple(map(int, input().split())) for _ in range(N)])
 
+MAX = 100 + 1
 
-for i in range(N):
-    for j in range(N - 1):
-        if i == j:
-            continue
-        if not (lines[j][1] < lines[j + 1][0]) and not(lines[j + 1][1] < lines[j][0]):
+arr = [0] * MAX
+
+for x, y in lines:
+    for i in range(x, y+1):
+        arr[i] += 1
+
+for x, y in lines:
+    for j in range(x, y+1):
+        arr[j] -= 1
+    
+    for k in range(MAX):
+        if arr[k] > 1:
             print("Yes")
             sys.exit()
 
