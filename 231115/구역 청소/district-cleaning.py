@@ -1,10 +1,10 @@
 a, b = map(int, input().split())
 c, d = map(int, input().split())
 
-if c < b:
+if c <= b:
     ans = d - a
 
-if a < d:
+elif a <= d:
     ans = b - c
 
 else:
