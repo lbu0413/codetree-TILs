@@ -7,9 +7,6 @@ if b <= c or d <= a:
     ans = (b - a) + (d - c)
 
 else:
-    if max(nums) == d:
-        ans = d - a
-    else:
-        ans = b - c
+    ans = max(nums) - min(nums)
 
 print(ans)
