@@ -8,7 +8,7 @@ for i in range(N):
             continue
         if lines[i][1] < lines[j][0] or lines[j][1] < lines[i][0]:
             continue
-    else:
-        ans = "Yes"
+else:
+    ans = "Yes"
 
 print(ans)
