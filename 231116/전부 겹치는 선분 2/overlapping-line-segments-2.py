@@ -4,7 +4,7 @@ N = int(input())
 lines = [tuple(map(int, input().split())) for _ in range(N)]
 
 def check_overlap(line1, line2):
-    return not(line1[1] < line2[0] or line2[1] < line1[0])
+    return not(line1[1] < line2[0]) or not (line2[1] < line1[0])
 
 ans = "No"
 
