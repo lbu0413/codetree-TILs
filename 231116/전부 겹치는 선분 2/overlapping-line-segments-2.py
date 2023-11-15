@@ -6,9 +6,9 @@ for i in range(N):
     for j in range(N):
         if i == j:
             continue
-
-        if not (lines[i][1] < lines[j][0]) or not (lines[j][1] < lines[i][0]):
-            ans = "Yes"
-            break
+        if lines[i][1] < lines[j][0] or lines[j][1] < lines[i][0]:
+            continue
+    else:
+        ans = "Yes"
 
 print(ans)
