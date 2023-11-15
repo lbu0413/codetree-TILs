@@ -7,7 +7,7 @@ for i in range(N):
         if i == j:
             continue
 
-        if lines[i][1] >= lines[j][0] or lines[j][1] >= lines[i][0]:
+        if not (lines[i][1] < lines[j][0]) or not (lines[j][1] < lines[i][0]):
             ans = "Yes"
             break
 
