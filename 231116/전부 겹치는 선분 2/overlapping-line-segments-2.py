@@ -1,7 +1,7 @@
 import sys
 
 N = int(input())
-lines = [tuple(map(int, input().split())) for _ in range(N)]
+lines = sorted([tuple(map(int, input().split())) for _ in range(N)])
 
 
 for i in range(N):
