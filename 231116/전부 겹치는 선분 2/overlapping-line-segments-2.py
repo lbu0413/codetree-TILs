@@ -3,16 +3,17 @@ import sys
 N = int(input())
 
 lines = [tuple(map(int, input().split())) for _ in range(N)]
-ans = "No"
 for i in range(N):
     for j in range(N):
-        if i == j:
-            continue
-        if lines[i][1] < lines[j][0] or lines[j][1] < lines[i][0]:
-            continue
-        else:
-            print("Yes")
-            sys.exit()
+        for k in range(N):
+            if i == j and i == k:
+                continue
             
+            if lines[j][1] < lines[k][0] or lines[k][1] < lines[j][0]:
+                ans = " No"
+            
+            else:
+                print("Yes")
+                sys.exit()
 
 print(ans)
