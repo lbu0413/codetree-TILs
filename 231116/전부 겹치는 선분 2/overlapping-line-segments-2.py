@@ -16,7 +16,7 @@ for x, y in lines:
         arr[j] -= 1
     
         for k in range(MAX):
-            if arr[k] > 1:
+            if arr[k] == N - 1:
                 print("Yes")
                 sys.exit()
 
