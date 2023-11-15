@@ -1,3 +1,5 @@
+import sys
+
 N = int(input())
 
 lines = [tuple(map(int, input().split())) for _ in range(N)]
@@ -8,7 +10,9 @@ for i in range(N):
             continue
         if lines[i][1] < lines[j][0] or lines[j][1] < lines[i][0]:
             continue
-else:
-    ans = "Yes"
+        else:
+            print("Yes")
+            sys.exit()
+            
 
 print(ans)
