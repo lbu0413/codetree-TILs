@@ -1,13 +1,15 @@
 a, b = map(int, input().split())
 c, d = map(int, input().split())
 
-if c <= b:
-    ans = d - a
+nums = [a, b, c, d]
 
-elif a <= d:
-    ans = b - c
+if b <= c or d <= a:
+    ans = (b - a) + (d - c)
 
 else:
-    ans = (b - a) + (d - c)
+    if max(nums) == d:
+        ans = d - a
+    else:
+        ans = b - c
 
 print(ans)
