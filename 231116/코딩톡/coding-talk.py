@@ -14,9 +14,13 @@ if p == 0:
     print("")
     exit()
 
+
 suspects = []
 for i in range(n):
-    if alphabets[i] not in people:
+    if messages[i][0] in suspects:
+        continue
+
+    elif alphabets[i] not in people:
         suspects.append(alphabets[i])
 
     elif messages[i][1] == messages[p][1]:
@@ -24,7 +28,5 @@ for i in range(n):
     
     elif people.rindex(messages[i][0]) < p:
         suspects.append(messages[i][0])
-        
-    
     
 print(*sorted(suspects))
