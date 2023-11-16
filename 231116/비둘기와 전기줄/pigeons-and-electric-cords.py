@@ -9,8 +9,11 @@ for i in range(N):
     pigeon, num = pigeons[i]
     if (check1[pigeon] == 0 and num == 1) or (check1[pigeon] == 1 and num == 0):
         check2[pigeon] += 1
+
+    elif check1[pigeon] == num:
+        continue
     
-    else:
-        check1[pigeon] = num
+    check1[pigeon] = num
+
 
 print(sum(check2))
