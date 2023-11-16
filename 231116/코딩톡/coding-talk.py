@@ -13,6 +13,9 @@ for person, number in messages:
 suspects = []
 
 for alph in alphabets:
+    if p == 0:
+        print("")
+        exit()
     if alph not in people:
         suspects.append(alph)
     else:
