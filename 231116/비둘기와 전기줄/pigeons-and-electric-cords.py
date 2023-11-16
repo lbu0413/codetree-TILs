@@ -2,12 +2,15 @@ N = int(input())
 
 pigeons = [tuple(map(int, input().split())) for _ in range(N)]
 
-cross = [0] * 11
+check1 = ["X"] * 11
+check2 = [0] * 11
 
-for pigeon, num in pigeons:
-    cross[pigeon] += 1
+for i in range(N):
+    pigeon, num = pigeons[i]
+    if (check1[pigeon] == 0 and num == 1) or (check1[pigeon] == 1 and num == 0):
+        check2[pigeon] += 1
+    
+    else:
+        check1[pigeon] = num
 
-for i in range(len(cross)):
-    cross[i] //= 2
-
-print(sum(cross))
+print(sum(check2))
