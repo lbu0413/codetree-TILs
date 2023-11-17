@@ -12,7 +12,7 @@ total = 0
 for i in range(a, b + 1):
     if i == 1:
         print(0)
-        sexit()
+        exit()
     if prime(i):
         total += i
 
