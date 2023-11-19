@@ -20,39 +20,36 @@ for i in range(N):
 
 
 diff2 = -1
-distance = 0
-diff2_idx = -1
+max_idx = -1
 if seats[0] == '0':
+    distance = 0
     for i in range(N):
         if seats[i] == '1':
             diff2_idx = i
             break
         distance += 1
-diff2 = distance 
+    
+    if distance > diff2:
+        diff2 = distance
+        max_idx = 0
 
 
-diff3 = -1
-distance2 = 0
 if seats[N - 1] == '0':
+    distance = 0
     for i in range(N - 1, -1, -1):
         if seats[i] == '1':
             break
-        distance2 += 1
-diff3 = distance2
+        distance += 1
+    
+    if distance > diff2:
+        diff2 = distance
+        max_idx = N - 1
 
 
-diff1 = (max_i + max_j) // 2
-
-max_ = max(diff1, diff2, diff3)
-if max_ == diff1:
-    seats[diff1] = '1'
-
-elif max_ == diff2:
-    seats[0] = '1'
-
+if diff2 >= diff2 // 2:
+    seats[max_idx] = '1'
 else:
-    seats[-1] = '1'
-
+    seats[(max_i + max_j) // 2] = '1'
 
 
 for i in range(N):
