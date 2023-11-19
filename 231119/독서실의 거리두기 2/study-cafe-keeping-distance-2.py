@@ -23,7 +23,7 @@ diff2 = -1
 distance = 0
 diff2_idx = -1
 if seats[0] == '0':
-    for i in range(1, N):
+    for i in range(N):
         if seats[i] == '1':
             diff2_idx = i
             break
@@ -32,12 +32,13 @@ diff2 = distance
 
 
 diff3 = -1
-if seats[-1] == '0':
-    for i in range(-2, -1, -1):
+distance2 = 0
+if seats[N - 1] == '0':
+    for i in range(N - 1, -1, -1):
         if seats[i] == '1':
             break
-        distance += 1
-diff3 = distance
+        distance2 += 1
+diff3 = distance2
 
 
 diff1 = (max_i + max_j) // 2
