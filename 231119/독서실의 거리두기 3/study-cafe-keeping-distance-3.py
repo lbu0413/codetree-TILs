@@ -18,7 +18,7 @@ for i in range(N):
                     max_j = j
                     break
 
-seats[(max_j - max_i) // 2 + max_i] = '1'
+seats[(max_j - max_i) // 2] = '1'
 
 ans = sys.maxsize
 for i in range(N):
