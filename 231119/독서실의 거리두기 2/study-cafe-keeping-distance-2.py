@@ -24,6 +24,6 @@ for i in range(N):
         for j in range(i + 1, N):
             if seats[j] == '1':
                 min_ = min(min_, j - i)
-                break
+        break
 
 print(min_)
