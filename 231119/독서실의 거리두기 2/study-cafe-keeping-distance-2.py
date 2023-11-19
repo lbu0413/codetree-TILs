@@ -16,7 +16,7 @@ for i in range(N):
                     diff = j - i
                     max_i = i
                     max_j = j
-                    break
+                break
 
 
 diff2 = -1
@@ -41,7 +41,8 @@ diff3 = distance
 
 
 diff1 = (max_i + max_j) // 2
-max_ = max((diff1), diff2, diff3)
+
+max_ = max(diff1, diff2, diff3)
 if max_ == diff1:
     seats[diff1] = '1'
 
@@ -50,7 +51,6 @@ elif max_ == diff2:
 
 else:
     seats[-1] = '1'
-
 
 
 
