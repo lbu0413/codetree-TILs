@@ -1,7 +1,5 @@
 import sys
 
-
-
 N = int(input())
 seats = list(input())
 
@@ -14,11 +12,12 @@ for i in range(N):
         for j in range(i + 1, N):
             if seats[j] == '1':
                 if j - i > max_dist:
+                    max_dist = j - i
                     max_i = i
                     max_j = j
-                    break
+                break
 
-seats[(max_j - max_i) // 2] = '1'
+seats[(max_j + max_i) // 2] = '1'
 
 ans = sys.maxsize
 for i in range(N):
