@@ -13,4 +13,20 @@ for i in range(N):
             cnt += 1
         break
 
-print(cnt)
+
+cnt2 = 0
+for i in range(N - 1, -1, -1):
+    for j in range(i - 1, -1 -1):
+        if people[i] < people[j]:
+            people[i], people[j] = people[j], people[i]
+            cnt2 += 1
+        break
+
+if cnt == 0:
+    print(cnt2)
+
+elif cnt2 == 0:
+    print(cnt)
+
+else:
+    print(min(cnt, cnt2))
