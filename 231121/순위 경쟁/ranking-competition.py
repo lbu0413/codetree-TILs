@@ -18,6 +18,9 @@ for i in range(N):
     
     current_max = max(A, B, C)
     
+    if current_max == A == B == C:
+        continue
+    
     if current_max == A and leader != 'A':
         cnt += 1
         leader = 'A'
