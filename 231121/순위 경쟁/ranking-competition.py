@@ -33,16 +33,16 @@ for person, score in scores:
     if person == 'A':
         if get_scores(a, b, c) != get_scores(a + score, b, c):
             number_of_leader_change += 1
-            a += score
+        a += score
     
     elif person == 'B':
         if get_scores(a, b, c) != get_scores(a, b + score, c):
             number_of_leader_change += 1
-            b += score
+        b += score
     
     else:
         if get_scores(a, b, c) != get_scores(a, b, c + score):
             number_of_leader_change += 1
-            c += score
+        c += score
 
 print(number_of_leader_change)
