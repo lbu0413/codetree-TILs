@@ -18,19 +18,19 @@ for i in range(N):
     
     current_max = max(A, B, C)
     
-    if current_max == A == B == C:
+    if current_max == A and current_max ==  B  and current_max == C:
         continue
     
-    if current_max == A and leader != 'A':
+    elif current_max == A and leader != 'A':
         cnt += 1
-        leader = 'A'
+
     
     elif current_max == B and leader != 'B':
         cnt += 1
-        leader = 'B'
+ 
     
     elif current_max == C and leader != 'C':
         cnt += 1
-        leader = 'C'
+
 
 print(cnt)
