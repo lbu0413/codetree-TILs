@@ -8,6 +8,10 @@ cover = 2 * M + 1
 if M == 0:
     print(nums.count(1))
 
+if N == nums.count(0):
+    print(0)
+    
+
 else:
     if cover >= N:
         ans = 1
