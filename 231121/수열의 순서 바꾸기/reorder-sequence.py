@@ -2,12 +2,12 @@ from collections import deque
 
 N = int(input())
 
-original_nums = list(range(1, N + 1))
 nums = list(map(int, input().split()))
 
-cnt = 0
-for i in range(N):
-    if nums[i] != original_nums[i]:
-        cnt += 1
 
-print(cnt + 1)
+idx = N - 2
+
+while idx >= 0 and nums[idx] < nums[idx + 1]:
+    idx -= 1
+
+print(idx + 1)
