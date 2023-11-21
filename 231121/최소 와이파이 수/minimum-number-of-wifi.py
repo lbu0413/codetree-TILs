@@ -16,6 +16,6 @@ else:
     if cover >= N:
         ans = 1
     else:
-        ans = N // cover
+        ans = N // cover + N % cover
 
     print(ans)
