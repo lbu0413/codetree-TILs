@@ -10,4 +10,7 @@ y_min = min(y1, y2, y3, y4)
 x = x_max - x_min
 y = y_max - y_min
 
-print(x * x)
+
+area1 = x * x
+area2 = y * y
+print(max(area1, area2))
