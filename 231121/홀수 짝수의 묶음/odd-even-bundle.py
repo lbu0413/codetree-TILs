@@ -23,8 +23,8 @@ while True:
             group_num += 1
         
         else:
-            if even > 0 or odd > 0:
-                group_num -= 1
+            # if even > 0 or odd > 0:
+            #     group_num -= 1
 
             break
     
