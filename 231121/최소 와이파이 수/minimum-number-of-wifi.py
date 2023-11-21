@@ -9,4 +9,9 @@ if M == 0:
     print(nums.count(1))
 
 else:
-    print(N // cover)
+    if cover >= N:
+        ans = 1
+    else:
+        ans = N // cover
+
+    print(ans)
