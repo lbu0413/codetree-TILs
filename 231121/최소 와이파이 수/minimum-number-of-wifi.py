@@ -5,4 +5,8 @@ nums = list(map(int, input().split()))
 # 와이파이 한 대가 커버할 수 있는 범위
 cover = 2 * M + 1
 
-print(N // cover)
+if M == 0:
+    print(nums.count(1))
+
+else:
+    print(N // cover)
