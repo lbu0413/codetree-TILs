@@ -8,7 +8,7 @@ class DoublyLinkedList:
     def __init__(self):
         self.END = Node(-1)
         self.head = self.END
-        self.head = self.END
+        self.tail = self.END
     
     def push_front(self, new_data):
         new_node = Node(new_data)
@@ -65,15 +65,17 @@ class DoublyLinkedList:
         return self.head
     
     def end(self):
-        return self.tai
+        return self.tail
 
 dbll = DoublyLinkedList()
 N, M = map(int, input().split())
 status = input()
+
 for s in status:
     dbll.push_back(s)
 
-print(dbll)
+it = dbll.end()
+
 for i in range(M):
     recipe = input().split()
     if len(recipe) == 1:
@@ -83,3 +85,23 @@ for i in range(M):
         letter = recipe[1]
     
     if code == 'L':
+        if it != dbll.begin():
+            it = it.prev
+    
+    if code =='R':
+        if it != dbll.end():
+            it = it.next
+        
+    if code == 'D':
+        if it != dbll.end():
+            it = dbll.erase(it)
+    
+    if code == 'P':
+        dbll.insert(it, letter)
+        
+
+
+it = dbll.begin()
+while it != dbll.end():
+    print(it.data, end="")
+    it = it.next
