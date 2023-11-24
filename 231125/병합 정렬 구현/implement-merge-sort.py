@@ -1,15 +1,18 @@
 N = int(input())
 arr = list(map(int, input().split()))
 
-def merge_sort(low, high):
+def merge_sort(arr, low, high):
+    if len(arr) == 1:
+        return
     if low < high:
         mid = (low + high) // 2
-        merge_sort(low, mid)
-        merge_sort(mid+1, high)
-        merge(low, mid, high)
+        merge_sort(arr, low, mid)
+        merge_sort(arr, mid+1, high)
+        merge(arr, low, mid, high)
+    return arr
 
 sorted_arr = [0] * N
-def merge(low, mid, high):
+def merge(arr, low, mid, high):
     i = low
     j = mid + 1
     k = low
@@ -38,6 +41,4 @@ def merge(low, mid, high):
         arr[x] = sorted_arr[x]
     
 
-merge_sort(0, N-1)
-
-print(*arr)
+print(*merge_sort(arr, 0, N-1))
