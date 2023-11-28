@@ -14,6 +14,8 @@ for i in range(N):
         if permutation_cnt == M:
             cnt += 1
             break
+    else:
+        cnt += permutation_cnt
 
 
 
@@ -26,8 +28,8 @@ for i in range(N):
         if permutation_cnt == M:
             cnt += 1
             break
+    else:
+        cnt += permutation_cnt
 
-if M == 1:
-    print(N * 2)
-else:
-    print(cnt)
+
+print(cnt)
