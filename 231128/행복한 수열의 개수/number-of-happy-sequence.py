@@ -11,11 +11,9 @@ for i in range(N):
         if row[j] == row[j + 1]:
             permutation_cnt += 1
         
-        if permutation_cnt == M:
+        if permutation_cnt >= M:
             cnt += 1
             break
-    else:
-        cnt += permutation_cnt
 
 
 
@@ -25,11 +23,11 @@ for i in range(N):
         if grid[j][i] == grid[j + 1][i]:
             permutation_cnt += 1
         
-        if permutation_cnt == M:
+        if permutation_cnt >= M:
             cnt += 1
             break
-    else:
-        cnt += permutation_cnt
 
-
-print(cnt)
+if M == 1:
+    print(N * 2)
+else:
+    print(cnt)
