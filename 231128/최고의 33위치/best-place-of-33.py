@@ -21,11 +21,10 @@ for row in range(N):
         new_row = row + 2
         new_col = col + 2
 
-        if new_row >= N or new_col >= N:
+        if 0 <= new_row < N and 0 <= new_col < N:
+            coins = get_coins(new_row, new_col)
+            max_ = max(max_, coins)
+            
+        else:
             continue
-        
-        coins = get_coins(new_row, new_col)
-
-        max_ = max(max_, coins)
-
 print(max_)
