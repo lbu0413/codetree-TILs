@@ -16,6 +16,7 @@ for i in range(N):
             break
 
 
+
 for i in range(N):
     permutation_cnt = 1
     for j in range(N-1):
@@ -26,4 +27,7 @@ for i in range(N):
             cnt += 1
             break
 
-print(cnt)
+if M == 1:
+    print(N * 2)
+else:
+    print(cnt)
