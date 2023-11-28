@@ -18,13 +18,13 @@ def get_coins(row, col):
 
 for row in range(N):
     for col in range(N):
-        new_row = row + 2
-        new_col = col + 2
+        for k in range(1, 3):
+            new_row = row + k
+            new_col = col + k
+            if 0 <= new_row < N and 0 <= new_col < N:
+                coins = get_coins(new_row, new_col)
+                max_ = max(max_, coins)
 
-        if 0 <= new_row < N and 0 <= new_col < N:
-            coins = get_coins(new_row, new_col)
-            max_ = max(max_, coins)
-            
-        else:
-            continue
+            else:
+                continue
 print(max_)
