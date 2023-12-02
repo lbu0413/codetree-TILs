@@ -20,15 +20,15 @@ for i in range(n):
         max_ = max(max_, vertical)
 
 
-min_ = 1001
-for i in range(n):
-    for j in range(m):
+
+for i in range(n-1):
+    for j in range(m-1):
         square = 0
-        for k in range(2):
-            for l in range(2):
-                if 0 <= i+k < n and 0 <= j+l < m:
-                    square += grid[i+k][j+l]
-                    min_ = min(min_, grid[i+k][j+l])
+        min_ = 1001
+        for k in range(i, i+2):
+            for l in range(j, j+2):
+                min_ = min(min_, grid[k][l])
+                square += grid[k][l]
         square -= min_
         max_ = max(max_, square)
 
