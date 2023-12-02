@@ -1,5 +1,4 @@
 n, m = map(int, input().split())
-
 grid = [list(map(int, input().split())) for _ in range(n)]
 
 max_ = 0
@@ -24,11 +23,11 @@ for i in range(n-1):
                 two += grid[i+1][j+k]
                 three += grid[i][j+k]
                 four += grid[i][j+k]
-        if 0 <= i+1 < n and 0 <= j+1 < m:
-            one += grid[i][j]
-            two += grid[i][j+1]
-            three += grid[i][j+1]
-            four += grid[i+1][j]
+        
+        one += grid[i][j]
+        two += grid[i][j+1]
+        three += grid[i][j+1]
+        four += grid[i+1][j]
         max_ = max(max_, one, two, three, four)
 
 print(max_)
