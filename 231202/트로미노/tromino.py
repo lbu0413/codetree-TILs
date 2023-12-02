@@ -5,13 +5,19 @@ max_ = 0
 
 for i in range(n):
     for j in range(m):
-        horizontal, vertical = 0, 0
+        horizontal = 0
         for k in range(3):
-            if 0 <= i+k < n and 0 <= j+k < m: 
+            if 0 <= j+k < m: 
                 horizontal += grid[i][j+k]
+        max_ = max(max_, horizontal)
+
+for i in range(n):
+    for j in range(m):
+        vertical = 0
+        for k in range(3):
+            if 0 <= i+k < n:
                 vertical += grid[i+k][j]
-        
-        max_ = max(max_, horizontal, vertical)
+        max_ = max(max_, vertical)
 
 
 for i in range(n-1):
