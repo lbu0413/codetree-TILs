@@ -30,5 +30,6 @@ for i in range(n):
                     square += grid[i+k][j+l]
                     min_ = min(min_, grid[i+k][j+l])
         square -= min_
-max_ = max(max_, square)
+        max_ = max(max_, square)
+
 print(max_)
