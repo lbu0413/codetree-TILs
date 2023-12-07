@@ -7,9 +7,7 @@ int main() {
     int t1, t2, t3;
     int A;
 
-    cin >> s1 >> t1;
-    cin >> s2 >> t2;
-    cin >> s3 >> t3;
+    cin >> s1 >> t1 >> s2 >> t2 >> s3 >> t3;
 
     if (s1 == 'Y' && t1 >= 37) {
         A += 1;
