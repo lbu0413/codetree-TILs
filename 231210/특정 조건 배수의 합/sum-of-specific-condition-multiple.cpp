@@ -6,7 +6,18 @@ int main() {
     cin >> a >> b;
     int sum = 0;
 
-    for (int i = a; i <= b; i++){
+    int big, small;
+    
+    if (a >= b) {
+        big = a;
+        small = b;
+    } 
+    else {
+        big = b;
+        small = a;
+    }
+
+    for (int i = small; i <= big; i++){
         if (i % 5 == 0) {
             sum += i;
         }
